@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#b87333">
+
+    <ImageButton
+        android:id="@+id/exit_main_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/rating_main_form"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/exit_main"
+        app:layout_constraintHorizontal_weight="1"/>
+    
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rating_main_form"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@id/exit_main_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/setting_main_btn"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:background="#85d979"
+        app:layout_constraintHorizontal_weight="5">
+        <ImageView
+            android:layout_column ="0"
+            android:layout_row ="0"
+            />
+        <TextView
+            android:layout_column ="1"
+            android:layout_row ="0"
+            android:text="Лейтенант"/>
+        <View
+            android:layout_column ="0"
+            android:layout_row ="1"
+            android:layout_columnSpan="2"/>
+    </GridLayout>
+
+    <ImageButton
+        android:id="@+id/setting_main_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rating_main_form"
+        android:src="@drawable/setting_main"
+        android:background="#b11333"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"/>
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        app:layout_constraintTop_toBottomOf="@id/rating_main_form"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:rowCount="3"
+        android:columnCount="1"
+        android:background="#ffb41f">
+
+        <Button
+            android:id="@+id/Remove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text= "Продолжить"
+            android:onClick="training_activity"
+            app:layout_constraintBottom_toBottomOf="@id/war"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/war"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="training_activity"
+            android:text="Даты войн"
+            app:layout_constraintBottom_toBottomOf="@id/btn_train"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/Remove" />
+
+        <Button
+            android:id="@+id/btn_train"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="training_activity"
+            android:text="Тренировка"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/war" />
+
+    </GridLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
