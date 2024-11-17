@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="post_person">
+        <item>Рядовой</item>
+        <item>Ефрейтор</item>
+        <item>Младший сержант</item>
+        <item>Сержант</item>
+        <item>Старший сержант</item>
+        <item>Старшина</item>
+        <item>Прапорщик</item>
+        <item>Старший прапорщик</item>
+        <item>Младший лейтенант</item>
+        <item>Лейтенант</item>
+        <item>Старший лейтенант</item>
+        <item>Капитан</item>
+        <item>Майор</item>
+        <item>Подполковник</item>
+        <item>Полковник</item>
+        <item>Генерал майор</item>
+        <item>Генерал лейтенант</item>
+        <item>Генерал полковник</item>
+        <item>Генерал армии</item>
+        <item>Маршал</item>
+
+
+
+    </string-array>
+</resources>
