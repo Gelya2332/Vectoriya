@@ -28,9 +28,12 @@ public class Rating_fragment extends Fragment {
         count = people.getRating();
         posts_person = getResources().getStringArray(R.array.post_person);// массив всех 20 званий
         change_count();
+        people.setRating(5300);
+        change_count();
     }
 
-    public void change_count(){//функция для изменения текста звания пользователя
+    //функция для изменения текста звания пользователя
+    public void change_count(){
         text_post.setText(posts_person[people.getRating()/1000]);// установка текста
         text_rat.setText(String.valueOf(people.getRating()));
     }

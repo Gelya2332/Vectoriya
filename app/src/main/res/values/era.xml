@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="era_string">
+        <item>Древняя Русь</item>
+        <item>Русские княжества</item>
+        <item>Русское государство/царство</item>
+        <item>Российская империя</item>
+        <item>Советский союз</item>
+        <item>Российская федерация</item>
+    </string-array>
+</resources>
