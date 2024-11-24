@@ -15,17 +15,13 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    Person people;
-    Button train_btn;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        train_btn = findViewById(R.id.btn_train);
     }
-    public void training_activity(View view){
-        Intent intent = new Intent(this, Training.class);
+    public void war_name(View view){
+        Intent intent = new Intent(this, Year_war.class);
         startActivity(intent);
     }
 
