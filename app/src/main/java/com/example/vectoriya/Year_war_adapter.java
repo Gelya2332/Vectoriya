@@ -43,7 +43,7 @@ public class Year_war_adapter extends RecyclerView.Adapter<Year_war_adapter.View
     //хранить кнопки адаптера
     public static class ViewHolder extends RecyclerView.ViewHolder {
         final ImageButton img_btn;
-        final Button btn_war;
+        final TextView btn_war;
         ViewHolder(View view){
             super(view);
             img_btn = view.findViewById(R.id.flag_btn);
