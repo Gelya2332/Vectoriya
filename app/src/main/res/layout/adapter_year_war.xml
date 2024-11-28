@@ -18,7 +18,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/rectangle"
-        android:text="лтоDHBJGEGREGBEERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR ф"
         android:paddingTop="30dp"
         android:paddingBottom="30dp"
         android:paddingLeft="30dp"

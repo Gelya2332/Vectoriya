@@ -8,8 +8,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -22,6 +24,9 @@ public class Year_war_adapter extends RecyclerView.Adapter<Year_war_adapter.View
     Year_war_adapter(Context context, List<War_button> war_list) {
         this.war_list = war_list;
         this.inflater = LayoutInflater.from(context);
+    }
+    interface OnWarClickListener{
+        void onWarClick(War_button war_btn, int position);
     }
     @Override
     public Year_war_adapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -50,4 +55,8 @@ public class Year_war_adapter extends RecyclerView.Adapter<Year_war_adapter.View
             btn_war = view.findViewById(R.id.year_btn);
         }
     }
+
+    // Найти какие позиции на экране
+    // Отправить если они изменились
+
 }
