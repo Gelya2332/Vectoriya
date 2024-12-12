@@ -1,13 +1,18 @@
 package com.example.vectoriya;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+
 public class War_button {
     private String name; // название
+    private String name_history;
     private String year;  // столица
     private boolean flag_check;
     private boolean flag_color;
 
-    public War_button(String name){
+    public War_button(String name, String name_history){
         this.name = name;
+        this.name_history = name_history;
         this.year = "0";
         this.flag_check = false;
         this.flag_color = false;
@@ -15,6 +20,9 @@ public class War_button {
 
     public String getName() {
         return this.name;
+    }
+    public String getName_history() {
+        return this.name_history;
     }
 
     public String getYear() {

@@ -18,15 +18,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Year_war_adapter extends RecyclerView.Adapter<Year_war_adapter.ViewHolder> {
-    private final LayoutInflater inflater;
-    private final List<War_button> war_list;
-
-    Year_war_adapter(Context context, List<War_button> war_list) {
-        this.war_list = war_list;
-        this.inflater = LayoutInflater.from(context);
-    }
     interface OnWarClickListener{
         void onWarClick(War_button war_btn, int position);
+    }
+    private final LayoutInflater inflater;
+    private final List<War_button> war_list;
+    private final OnWarClickListener onClickListener;
+    Year_war_adapter(Context context, List<War_button> war_list, OnWarClickListener onClickListener) {
+        this.onClickListener = onClickListener;
+        this.war_list = war_list;
+        this.inflater = LayoutInflater.from(context);
     }
     @Override
     public Year_war_adapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -39,6 +40,13 @@ public class Year_war_adapter extends RecyclerView.Adapter<Year_war_adapter.View
     public void onBindViewHolder(Year_war_adapter.ViewHolder holder, int position) {
         War_button war_btn = war_list.get(position);
         holder.btn_war.setText(war_btn.getName());
+        holder.itemView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v)
+            {
+                onClickListener.onWarClick(war_btn, position);
+            }
+        });
     }
 
     @Override
@@ -55,8 +63,5 @@ public class Year_war_adapter extends RecyclerView.Adapter<Year_war_adapter.View
             btn_war = view.findViewById(R.id.year_btn);
         }
     }
-
-    // Найти какие позиции на экране
-    // Отправить если они изменились
 
 }
